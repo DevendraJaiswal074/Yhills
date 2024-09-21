@@ -1,7 +1,7 @@
 Interactive To-Do Application
 
 This project was developed as part of a web development program organized by Yhills, focusing on HTML, CSS, and JavaScript. 
-The aim of this application is to create an interactive and user-friendly To-Do List that allows users to manage tasks efficiently.
+This application aims to create an interactive and user-friendly To-Do List that allows users to manage tasks efficiently.
 
 How to Use:
 
