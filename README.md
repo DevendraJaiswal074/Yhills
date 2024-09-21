@@ -7,4 +7,4 @@ How to Use:
 Input a task description, set the due date, and select the priority level.
 Click "Add Task" to create the task.
 Manage tasks by marking them as completed or deleting them as needed.
-This project showcases fundamental front-end web development skills and serves as a useful tool for task management.
+This project showcases fundamental front-end web development skills and is a useful task management tool.
