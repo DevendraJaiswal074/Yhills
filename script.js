@@ -1,8 +1,10 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById("task-form");
   const taskInput = document.getElementById("task-input");
   const dueDateInput = document.getElementById("due-date");
   const priorityInput = document.getElementById("priority");
+  const hoursInput = document.getElementById("hours-input");
   const taskList = document.getElementById("task-list");
 
   let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -15,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     taskList.innerHTML = '';
     tasks.forEach((task, index) => {
       const li = document.createElement("li");
-      li.classname = `task-item priority-${task.priority}`;
+      li.className = `task-item priority-${task.priority}`;
       if (task.completed) {
         li.classList.add('completed');
       }
@@ -23,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div>
             <span>${task.text}</span>
             <div class="task-details">
-            Due: ${task.dueDate || 'Not Set'} | Priority: ${task.priority}
+            Due : ${task.dueDate || 'Not Set'} | Priority: ${task.priority} | Hours: ${task.hours}
           </div>
           </div>
           <div>
@@ -33,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
       taskList.appendChild(li);
     });
-
   }
 
   form.addEventListener('submit', (e) => {
@@ -41,20 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const taskText = taskInput.value.trim();
     const dueDate = dueDateInput.value;
     const priority = priorityInput.value;
+    const hours = hoursInput.value;
+
     if (taskText) {
       tasks.push({
         text: taskText,
         completed: false,
         dueDate: dueDate,
-        priority: priority
+        priority: priority,
+        hours: hours || '0'
       });
+
       taskInput.value = '';
       dueDateInput.value = '';
       priority.value = 'low';
+      hoursInput.value = '';
       saveTasks();
       renderTasks();
     }
-
   });
 
   window.toggleTask = (index) => {

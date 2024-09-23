@@ -2,28 +2,29 @@
 <html>
 
 <head>
-    <title>A TO-DO Application</title>
-    <link rel="stylesheet" href="style.css">
+  <title>A TO-DO Application</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="image.webp" type="image/png">
 </head>
 
 <body>
-    <div class="container">
-        <h1> An Interactive TO-DO Application</h1>
-        <form id="task-form">
-            <input type="text" id="task-input" placeholder="Add a new Task..." required>
-            <input type="date" id="due-date">
-            <select id="priority">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
-            <button type="submit">Add Task</button>
+  <div class="container">
+    <h1> An Interactive TO-DO Application</h1>
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Add a new Task..." required>
+      <input type="date" id="due-date">
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <input type="number" id="hours-input" placeholder="Hours" min="1" style="width: 70px; margin-left: 0px; font-size: 20px;">
+      <button type="submit" >Add Task</button>
+    </form>
+    <ul id="task-list"></ul>
+  </div>
 
-        </form>
-        <ul id="task-list"></ul>
-    </div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
