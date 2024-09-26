@@ -4,22 +4,23 @@ body {
     margin: 0;
     padding: 0;
     /* background-color: #f4f4f4; */
-    background-color: #ffcc66;
+    /* background-color: #ffcc66; */
+    background: linear-gradient(135deg,#153677,#4e085f);
 
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     padding: 20px;
     text-align: center;
-
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    /* color: #333; */
+    color: white;
 }
 
 #task-from {
